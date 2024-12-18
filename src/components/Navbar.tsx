@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-purple-700"
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-blue-700"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>

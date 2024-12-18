@@ -18,21 +18,17 @@ interface Achievement {
 const achievementsList: Achievement[] = [
   {
     metric: "Projects",
-    value: "100",
+    value: "50",
     postfix: "+",
   },
+
   {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
-  },
-  {
-    metric: "Awards",
+    metric: "Certificates",
     value: "7",
   },
   {
     metric: "Years",
-    value: "5",
+    value: "2",
   },
 ];
 
@@ -50,7 +46,7 @@ const AchievementsSection: React.FC = () => {
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
-                  animateToNumber={parseInt(achievement.value.replace(/,/g, ""))} 
+                  animateToNumber={parseInt(achievement.value.replace(/,/g, ""))}
                   locale="en-US"
                   className="text-white text-4xl font-bold"
                   configs={() => [
@@ -58,7 +54,7 @@ const AchievementsSection: React.FC = () => {
                       mass: 1,
                       friction: 100,
                       tension: 140 * (index + 1),
-                    }
+                    },
                   ]}
                 />
                 {achievement.postfix}

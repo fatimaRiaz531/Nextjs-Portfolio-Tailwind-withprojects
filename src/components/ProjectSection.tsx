@@ -1,6 +1,5 @@
 "use client"; 
 
-import Image from "next/image";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTags";
@@ -22,37 +21,44 @@ const projectsData: Project[] = [
     title: "NextJS Portfolio Website",
     description: "I have built my initial portfolio website using Next.js, showcasing a collection of my personal projects. To enhance efficiency and code readability, I have integrated numerous new libraries and developed custom components.",
     Image: "/images/projects/portfolio.PNG",
-  
-
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/fatimaRiaz531/Nextjs-Portfolio-Tailwind-withprojects.git",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Photography Portfolio Website",
-    description: "Project 2 description",
-    Image: "/images/projects/2.png",
+    title: "E-Commerce Website in NextJS",
+    description: "This Figma-inspired e-commerce website, built with Next.js, features new functionalities, Shadcn, React Icons, and a clean, user-friendly design, showcasing simplicity and efficiency; explore more through my GitHub and Vercel links.",
+    Image: "/images/projects/e-figma-web.PNG",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/fatimaRiaz531/hackathon2-figma-website.git",
+    previewUrl: "https://hackathon2-figma-website-4pwhnbs3g-fatimariaz531s-projects.vercel.app/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "E-commerce Web Application in NextJS ",
     description: "Project 3 description",
-    Image: "/images/projects/3.png",
+    Image: "/images/projects/e-web.PNG",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    Image: "/images/projects/4.png",
+    title: "Count Down Timer",
+    description:"This project, part of a Next.js collection, allows users to set a custom countdown time with features to start, pause, and stop the timer, offering a simple, intuitive, and user-friendly experience with clean functionality and interactive control.",
+    Image: "/images/projects/timer.PNG",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/fatimaRiaz531/30-days-02-countdown-timer.git",
+    previewUrl: "https://30-days-02-countdown-timer.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "GitHub Repo",
+    description:"checkout my GitHub repo",
+    Image: "/images/projects/github.PNG",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/fatimaRiaz531",
     previewUrl: "/",
   },
   
