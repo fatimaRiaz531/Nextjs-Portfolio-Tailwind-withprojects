@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL;
-
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
   console.log(email, subject, message);
+
+  // Fetch the API key and email addresses asynchronously
+  const apiKey = await fetchApiKey(); // Assume this function fetches the API key
+  const fromEmail = process.env.FROM_EMAIL;
+  const resend = new Resend(apiKey);
+
   try {
     const data = await resend.emails.send({
       from: fromEmail,
@@ -27,3 +30,8 @@ export async function POST(req, res) {
   }
 }
 
+// Example function to fetch the API key
+async function fetchApiKey() {
+  // Logic to fetch the API key, e.g., from a secure store or environment variable
+  return process.env.RESEND_API_KEY; // Replace with actual fetching logic if needed
+}
